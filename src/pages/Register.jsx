@@ -1,16 +1,16 @@
 import React from 'react'
-import './register.css'
+import '../styles/register.css'
 
 
 function Register() {
   return (
-    <div class="container">
+    <div class="register-main-container">
     <div class="row">
         <div class="col-7">
             <div className="main-text">
-                <h1><span>Welcome!</span><br /> SRI LANKA</h1>
+                <h1><span className='main'>Welcome!</span><br /> <span>SRI</span> LANKA</h1>
                 <p>Discover the anticipation of your upcoming island retreat
-                     and indulge in the distinct adventures that this island gem has in store for you.</p>
+                and indulge in the distinct adventures that this island gem has in store for you.</p>
             </div>
         </div>
         <div class="col-5">
@@ -32,6 +32,9 @@ function Register() {
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
                     <label class="form-check-label" for="exampleCheck1">Remeber me</label>
+                </div>
+                <div class="form-group account">
+                    <p>Already have an account? <a href="">Sign in</a></p>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
