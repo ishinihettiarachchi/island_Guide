@@ -1,8 +1,16 @@
 import React from 'react'
 import '../styles/register.css'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
+
+
+   
 
 function Register() {
+    const [users, setUsers] = useState([]);
+  
+
   return (
     <div class="register-main-container">
     <div class="row">

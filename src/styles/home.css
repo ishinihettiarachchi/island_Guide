@@ -1,0 +1,136 @@
+
+.home-container .row{
+    margin-left: 0;
+}
+
+.home-container1{
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/home-banner.jpeg');   
+}
+
+.home-row2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;    
+}
+
+.home-row2 .description{
+    margin:5% 0;
+    background-color: rgb(255,255,255,0.6);
+    padding: 5% 5%;
+}
+
+.search-block p{
+    font-size: 20px;
+    color: white;
+}
+
+.search-block input{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.search-block input:focus{
+    outline: none;
+    background-color: rgb(255,255,255,0.6);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.search-block .search-btn{
+    padding: 8px 30px ;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(7, 218, 255);
+    font-size: 1.2rem;   
+}
+
+.search-block .search-btn:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(7, 218, 255,0.6);
+}
+
+.search-block .search-btn:focus{
+    border: none;
+}
+
+.home-container2{
+    padding: 5%;
+    width: 100%;
+}
+
+.home-container2 .main-para{
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+.features{
+    padding: 5%;
+    
+}
+
+.card{
+    border: none;
+}
+
+.card img{
+    width: 100%;
+    transition: transform 0.5s;
+    border-radius: 10%;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background:linear-gradient(rgba(0,0,0,0.6),#049ff3);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font: 14px;
+    transition: height 0.5s;
+    border-radius: 10%;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+.layer p{
+    color: white;
+}
+
+.layer a{
+    color: rgb(12, 99, 239);
+    text-decoration: none;
+    background-color: white;
+    text-align: center;
+    border-radius: 50%;
+    padding: 5%;
+}
+
+.card:hover img{
+    transform: scale(1.1);
+}
+
+.card:hover .layer{
+    height:100%;
+}
