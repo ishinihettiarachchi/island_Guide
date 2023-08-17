@@ -1,0 +1,51 @@
+.footer-container{
+    background-color: rgb(5, 5, 55);
+    padding: 20px 0;
+}
+
+.quick-links, .services{
+    padding:20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quick-links h4, .services h4{
+    color: rgb(130, 197, 231);
+    text-align: center;
+}
+
+.quick-links ul, .services ul{
+    list-style: none;
+}
+
+.quick-links a, .services a{
+    text-decoration: none;
+    color: rgb(206, 202, 202);
+    
+}
+
+.footer-copy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:  0 40%;
+}
+
+.footer-copy a{
+    flex: 2;
+    color: white;
+}
+
+.footer-container hr{
+    border: 1px solid white;
+}
+
+
+.footer-container p{
+    color: rgb(226, 221, 221);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}

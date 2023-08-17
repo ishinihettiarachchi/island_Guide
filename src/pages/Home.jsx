@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import '../styles/home.css'
 import pic1 from '../images/pic1.png'
 import pic2 from '../images/pic2.png'
@@ -88,6 +89,9 @@ function Home() {
                   </div>
             </div>
     </div>
+    
+              <Footer/>
+      
     </div>
 
   )
