@@ -12,11 +12,9 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 function Home() {
   return (
 <div className="home-container">
-
+      
     <div className='row home-container1'>
-        <div className="row home-row1">
-              <Navbar/>
-        </div>
+            <Navbar/>
         <div className="row home-row2">
               <div className="col-5 description">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 

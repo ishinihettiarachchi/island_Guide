@@ -5,7 +5,6 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import logo from '../images/logo.png';
-import SearchIcon from '@mui/icons-material/Search';
 import '../styles/navbar.css';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
@@ -13,8 +12,8 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 function Navbar() {
   return (
     <div className='navbar-container'>
-        <div className="row row1" >
-            <div className="col-9" >
+        <div className="row row1">
+            <div className="col-9">
                 <a href="#" className='icon'><EmailIcon/></a>
                 <a href="#">islandguide@gmail.com</a>
             </div>
