@@ -25,6 +25,10 @@
     
 }
 
+.quick-links a:hover, .services a:hover{
+    color: rgb(255, 255, 255);
+}
+
 .footer-copy{
     display: flex;
     align-items: center;

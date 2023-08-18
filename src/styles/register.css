@@ -59,3 +59,10 @@ font-size: 1.2rem;
     color: rgb(198, 199, 200);
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    
+    .main-text p{
+        display: none;
+    }
+} 
