@@ -2,13 +2,17 @@ import React from 'react';
 import '../styles/register.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import logo from '../images/logo.png';
 
 function Register() {
 
   return (
-    <div className="container-fluid register-main-container">
-      <div className="row">
-        <div className="col-md-7">
+    <div className="register-main-container">
+      <div className ="row">
+        <div className=" col-lg-7">
+            <div className="logo">
+               <img src={logo} alt=""/>
+            </div>
           <div className="main-text">
             <h1>
               <span className="main">Welcome!</span>
@@ -21,7 +25,7 @@ function Register() {
             </p>
           </div>
         </div>
-        <div className="col-md-5">
+        <div className="col-sm-12 col-md-12 col-lg-5">
           <div className="register">
             <form className="register-form">
               <div className="form-group">

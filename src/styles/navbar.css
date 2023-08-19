@@ -35,11 +35,7 @@
     text-decoration: none;
     position: relative;
     color: rgb(255, 253, 253);
-    font-size: 1.3rem;
-    font-weight: bold;
-
 }
-
 
 #links a:before{
     content: '';
@@ -49,8 +45,7 @@
     height: 3px;
     width: 0%;
     background-color:rgb(7, 218, 255);
-    transition: all 0.4s ease;
-   
+    transition: all 0.4s ease;  
 }
 
 #links a:hover{
