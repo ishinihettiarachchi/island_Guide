@@ -1,0 +1,19 @@
+.about-container{
+    margin: 0;
+    padding: 0;
+   
+}
+
+.about-container .left{
+   margin:5% 10%;
+}
+
+.about-container .slide-content {
+    background-color: rgb(0,0,0,0.5);
+}
+
+.about-container .slide-content .heading, .para{
+    color: aliceblue;
+}
+
+  

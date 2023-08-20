@@ -88,13 +88,9 @@
 }
 
 @media (max-width: 430px) {
- 
-
     .register{
         box-shadow: 0 4px 8px 0 rgba(14, 0, 53, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         border-radius: 5%;
         background-color: rgba(10, 59, 127, 0.5);
     }
-    
-
 } 
