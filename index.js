@@ -4,23 +4,22 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan')
 const mongoose = require('mongoose');
 const cors = require('cors')
+//const authJwt = require('./helpers/jwt')
 
 require('dotenv/config');
 const api = process.env.API_URL;
 
-const usersRouter = require('./routers/users');
+const usersRoutes = require('./routes/users');
 
 
 //middleware
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
+//app.use(authJwt);
 app.use(cors())
 
 //routers
-app.use(`${api}/register`,usersRouter);
-
-const User = require('./models/user');
-
+app.use(`${api}/users`,usersRoutes);
 
 mongoose.connect(process.env.CONNECTION_STRING, {
     useNewUrlParser : true,
