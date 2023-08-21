@@ -6,6 +6,28 @@ import logo from '../images/logo.png';
 
 function Register() {
 
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [cpassword, setCpassword] = useState('');
+
+  const submit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post("http://localhost:3001/api/v1/users", {
+        nameOrEmail: username, // Use nameOrEmail instead of username
+        passwordHash: password, // Use passwordHash instead of password
+        cpasswordHash: cpassword // Use cpasswordHash instead of cpassword
+      });
+
+      console.log(response.data);
+      // You can handle the response here, such as showing a success message to the user
+    } catch (error) {
+      console.error('Error submitting data:', error);
+      // Handle the error, such as showing an error message to the user
+    }
+  }
+
   return (
     <div className="register-main-container">
       <div className ="row">
@@ -36,6 +58,7 @@ function Register() {
                   id="username"
                   aria-describedby="emailHelp"
                   placeholder="Enter Username or Email"
+                  onChange={(e)=>{setUsername(e.target.value)}}
                 />
               </div>
               <div className="form-group">
@@ -45,6 +68,7 @@ function Register() {
                   className="form-control"
                   id="password"
                   placeholder="Password"
+                  onChange={(e)=>{setPassword(e.target.value)}}
                 />
               </div>
               <div className="form-group">
@@ -54,6 +78,7 @@ function Register() {
                   className="form-control"
                   id="cpassword"
                   placeholder="Confirm Password"
+                  onChange={(e)=>{setCpassword(e.target.value)}}
                 />
               </div>
               <div className="form-group form-check">
@@ -71,7 +96,7 @@ function Register() {
                   Already have an account? <a href="">Sign in</a>
                 </p>
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary" onClick={submit}>
                 Submit
               </button>
             </form>
