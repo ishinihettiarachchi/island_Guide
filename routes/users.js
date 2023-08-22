@@ -82,19 +82,19 @@ router.post('/login', async (req,res) => {
 })
 
 
-router.post('/register', async (req,res)=>{
-    let user = new User({
-        nameOrEmail: req.body.name,
-        passwordHash: bcrypt.hashSync(req.body.password, 10),
-        cpasswordHash: bcrypt.hashSync(req.body.password, 10),
-    })
-    user = await user.save();
+// router.post('/register', async (req,res)=>{
+//     let user = new User({
+//         nameOrEmail: req.body.name,
+//         passwordHash: bcrypt.hashSync(req.body.password, 10),
+//         cpasswordHash: bcrypt.hashSync(req.body.password, 10),
+//     })
+//     user = await user.save();
 
-    if(!user)
-    return res.status(400).send('the user cannot be created!')
+//     if(!user)
+//     return res.status(400).send('the user cannot be created!')
 
-    res.send(user);
-})
+//     res.send(user);
+// })
 
 
 // router.delete('/:id', (req, res)=>{
