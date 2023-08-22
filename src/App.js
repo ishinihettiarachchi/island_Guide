@@ -2,7 +2,10 @@
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Logout from './pages/Logout';
 import About from './pages/About';
+
+
 import {BrowserRouter as Router ,Routes, Route} from 'react-router-dom'
 
 function App() {
@@ -10,10 +13,11 @@ function App() {
     <div className="App">
      <Router>
           <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register/>} />
-            <Route path="/home" element={<Home/>} />
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/register" element={<Register/>}/>
+            <Route path="/" element={<Home/>} />
             <Route path="/about" element={<About/>} />
+            <Route path="/logout" element={<Logout/>} />
           </Routes>
         </Router>
     </div>

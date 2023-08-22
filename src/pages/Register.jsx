@@ -1,10 +1,14 @@
 import React from 'react';
 import '../styles/register.css';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import logo from '../images/logo.png';
 
 function Register() {
+
+  const navigate = useNavigate();
+
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -15,16 +19,16 @@ function Register() {
 
     try {
       const response = await axios.post("http://localhost:3001/api/v1/users", {
-        nameOrEmail: username, // Use nameOrEmail instead of username
-        passwordHash: password, // Use passwordHash instead of password
-        cpasswordHash: cpassword // Use cpasswordHash instead of cpassword
+        nameOrEmail: username, 
+        passwordHash: password,
+        cpasswordHash: cpassword 
       });
 
       console.log(response.data);
-      // You can handle the response here, such as showing a success message to the user
+      navigate('/login');
+      
     } catch (error) {
       console.error('Error submitting data:', error);
-      // Handle the error, such as showing an error message to the user
     }
   }
 

@@ -4,12 +4,20 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { useState, useEffect } from 'react';
 import logo from '../images/logo.png';
 import '../styles/navbar.css';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import {Link} from 'react-router-dom';
 
 
 function Navbar() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+  
   return (
     <div className='navbar-container'>
         <div className="row row1">
@@ -30,14 +38,27 @@ function Navbar() {
                <img src={logo} alt="" />
             </div>
             <div className="col-6" id='links'>
-                <a href="#">Home</a>
+                <a href="#"><Link to='/'>Home</Link></a>
                 <a href="#">Plan Your Trip</a>
-                <a href="#">About</a>
+                <a href="#"><Link to='/about'>About</Link></a>
                 <a href="#">Contact Us</a>
             </div>
             <div className="col-1" id='user-icon'>
-               <a href=""><AccountCircleIcon/></a>
-            </div>
+        <div className={`dropdown ${dropdownOpen ? 'show' : ''}`}>
+          <button
+            className="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            onClick={toggleDropdown}
+          >
+            <AccountCircleIcon />
+          </button>
+          <div className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`} aria-labelledby="dropdownMenuButton">
+            <a className="dropdown-item" href="#">My Profile</a>
+            <a className="dropdown-item" href="#"><Link to='/logout'>Logout</Link></a>
+          </div>
+        </div>
+      </div>
          </div>
     </div>
   )
