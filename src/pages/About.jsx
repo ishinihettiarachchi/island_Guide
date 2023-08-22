@@ -12,8 +12,11 @@ import '../styles/about.css'
 function About() {
   return (   
     <div className='about-container'>
-      <div className="row about-container">
-      <Navbar/>
+      <div className="row about-container1">
+        <div className="row about-container1 nav">
+        <Navbar/>
+        </div>
+      
     <div id="carouselExampleDark" className="carousel carousel-dark slide hello col-5 left">
       <div className="carousel-indicators">
         <button

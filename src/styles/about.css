@@ -1,10 +1,8 @@
-.about-container{
-    margin: 0;
-    padding: 0;
-   
+.about-container .row{
+    margin-left: 0;
 }
 
-.about-container .left{
+.about-container1 .left{
    margin:5% 10%;
 }
 
