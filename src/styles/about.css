@@ -3,7 +3,7 @@
 }
 
 .about-container1 .left{
-   margin:5% 10%;
+   margin:5% 5%;
 }
 
 .about-container .slide-content {
@@ -13,5 +13,24 @@
 .about-container .slide-content .heading, .para{
     color: aliceblue;
 }
+
+.slider{
+    padding: 5%;
+}
+
+.col-7.paragraph{
+    margin-top: 10%;
+}
+
+.col-7.paragraph p{
+    background-color: rgb(208, 189, 189);
+    margin: 10px 80px;
+    padding: 50px;
+    border-radius: 10px;
+
+}
+
+
+  
 
   
