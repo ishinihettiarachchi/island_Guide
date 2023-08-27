@@ -10,6 +10,7 @@ require('dotenv/config');
 const api = process.env.API_URL;
 
 const usersRoutes = require('./routes/users');
+const placesRoutes = require('./routes/places');
 
 
 //middleware
@@ -20,6 +21,7 @@ app.use(cors())
 
 //routers
 app.use(`${api}/users`,usersRoutes);
+app.use(`${api}/places`,placesRoutes);
 
 mongoose.connect(process.env.CONNECTION_STRING, {
     useNewUrlParser : true,
