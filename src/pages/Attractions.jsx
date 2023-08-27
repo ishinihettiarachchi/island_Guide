@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
+import {Link} from 'react-router-dom'
 
 
 function Attractions() {
@@ -14,6 +15,9 @@ function Attractions() {
   const placesPerPage = 8;
   const pagesVisited = pageNumber * placesPerPage;
 
+ 
+  
+
   const displayPlaces = places.slice(pagesVisited, pagesVisited+placesPerPage)
   .map(places => {
     return  <div class="col-lg-3 mb-3">
@@ -22,7 +26,10 @@ function Attractions() {
             <div class="card-body">
               <h5 class="card-title">{places.name}</h5>
               <p class="card-text">{places.description}</p>
-             <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+              <Link to={`/attractions/${places._id}`}>
+                  <a href="" className="btn btn-outline-success btn-sm" >Read More</a>
+              </Link>
+
             </div>
            </div>
           </div>
@@ -39,6 +46,8 @@ function Attractions() {
     .then(places =>  setPlaces(places.data))
     .catch(err=>console.log(err))
   },[])
+
+
 
   return (
     <div className='attractions-container'>
@@ -85,7 +94,7 @@ function Attractions() {
             pageCount={pageCount}
             onPageChange={changePage}
             containerClassName={"paginationBttns"}
-            previousLinkClassName={ "previousBtton"}
+            previousLinkClassName={ "previousBttn"}
             nextLinkClassName={"nextBttn"}
             disabledClassName={"paginationDisabled"}
             activeClassName={"paginationActive"}
