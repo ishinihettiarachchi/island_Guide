@@ -5,10 +5,8 @@ import Register from './pages/Register';
 import Logout from './pages/Logout';
 import About from './pages/About';
 import Contact from './pages/Contact';
-
-
-
 import {BrowserRouter as Router ,Routes, Route} from 'react-router-dom'
+import Attractions from './pages/Attractions';
 
 function App() {
   return (
@@ -21,6 +19,7 @@ function App() {
             <Route path="/about" element={<About/>} />
             <Route path="/logout" element={<Logout/>} />
             <Route path="/contact" element={<Contact/>} />
+            <Route path="/attractions" element={<Attractions/>} />
           </Routes>
         </Router>
     </div>

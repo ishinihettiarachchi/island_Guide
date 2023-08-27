@@ -7,6 +7,7 @@ import pic2 from '../images/pic2.png'
 import pic3 from '../images/pic3.png'
 import pic4 from '../images/pic4.png'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import {Link} from 'react-router-dom';
 
 
 function Home() {
@@ -50,7 +51,7 @@ function Home() {
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     Ut enim ad minim veniam, </p>
-                              <a href="#" target="_blank"><OpenInNewIcon/></a>
+                              <Link to ="/attractions"><a href="#" target="_blank"><OpenInNewIcon/></a></Link>
                         </div>
                   </div>
                   <div className="col-3 card">

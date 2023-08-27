@@ -79,11 +79,11 @@
     
 }
 
-.card{
+.home-container2 .card{
     border: none;
 }
 
-.card img{
+.home-container2 .card img{
     width: 100%;
     transition: transform 0.5s;
     border-radius: 10%;
@@ -128,10 +128,10 @@
     padding: 5%;
 }
 
-.card:hover img{
+.home-container2 .card:hover img{
     transform: scale(1.1);
 }
 
-.card:hover .layer{
+.home-container2 .card:hover .layer{
     height:100%;
 }
