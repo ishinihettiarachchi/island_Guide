@@ -61,10 +61,17 @@
 }
 
 .card-img-top {
-    height: 200px; /* Adjust this value as needed */
-    object-fit: cover; /* Maintain image aspect ratio and cover container */
+    height: 200px; 
+    object-fit: cover; 
+  }
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
-
 
 
