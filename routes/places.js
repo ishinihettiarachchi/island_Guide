@@ -31,5 +31,18 @@ router.post(`/`, (req, res)=>{
     
 })
 
+router.get('/:id', async (req, res) => {
+    try {
+        const place = await Place.findById(req.params.id);
+        if (!place) {
+            return res.status(404).json({ message: 'Place not found' });
+        }
+        res.status(200).json(place);
+    } catch (error) {
+        res.status(500).json({ message: 'Error fetching place' });
+    }
+});
+
+
 
 module.exports = router;
