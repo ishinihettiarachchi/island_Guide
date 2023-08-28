@@ -11,19 +11,30 @@ import {Link} from 'react-router-dom'
 function Attractions() {
   const [places, setPlaces] = useState([]);
   const [pageNumber, setPageNumber] = useState(0);
+  const [input, setInput] = useState('');
+  const [filteredPlaces, setFilteredPlaces] = useState([]);
+
+  const handleInputChange = (e) => {
+    setInput(e.target.value);
+  };
+
+  useEffect(() => {
+    setPageNumber(0);
+  }, [input]);
 
   const placesPerPage = 8;
   const pagesVisited = pageNumber * placesPerPage;
 
-  const displayPlaces = places.slice(pagesVisited, pagesVisited+placesPerPage)
-  .map(places => {
+
+  const displayPlaces = filteredPlaces.slice(pagesVisited, pagesVisited + placesPerPage)
+  .map(place => {
     return  <div class="col-lg-3 mb-3">
           <div class="card place">
-            <img src={places.image} alt="" class="card-img-top"/>
+            <img src={place.image} alt="" class="card-img-top"/>
             <div class="card-body">
-              <h5 class="card-title">{places.name}</h5>
-              <p class="card-text">{places.description}</p>
-              <Link to={`/attractions/${places._id}`}className="btn btn-outline-success btn-sm">
+              <h5 class="card-title">{place.name}</h5>
+              <p class="card-text">{place.description}</p>
+              <Link to={`/attractions/${place._id}`}className="btn btn-outline-success btn-sm">
                   Read More
               </Link>
 
@@ -33,19 +44,23 @@ function Attractions() {
   });
 
 
-  const pageCount = Math.ceil(places.length/placesPerPage)
- 
-  const changePage = ({selected}) => {
-      setPageNumber(selected)
-  }
+  const pageCount = Math.ceil(filteredPlaces.length / placesPerPage);
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
 
-  useEffect(()=>{
-
+  useEffect(() => {
     axios.get('http://localhost:3001/api/v1/places')
-    .then(places =>  setPlaces(places.data))
-    .catch(err=>console.log(err))
-  },[])
-
+      .then(response => {
+        const filtered = response.data.filter(place =>
+          place.name.toLowerCase().includes(input.toLowerCase())
+        );
+        setPlaces(response.data);
+        setFilteredPlaces(filtered);
+      })
+      .catch(err => console.log(err));
+  }, [input]);
+  
 
 
   return (
@@ -61,7 +76,11 @@ function Attractions() {
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
                     nisi ut aliquip ex ea commodo consequat.</p>
                 <div className="search-content">
-                <input type="text" />
+                <input
+                    type="text"
+                    value={input}
+                    onChange={handleInputChange}
+                    placeholder="Search attractions..."/>
                 <button className='attraction-button'>Search</button>
                 </div>
             </div>
