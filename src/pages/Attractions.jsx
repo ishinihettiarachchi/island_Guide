@@ -15,9 +15,6 @@ function Attractions() {
   const placesPerPage = 8;
   const pagesVisited = pageNumber * placesPerPage;
 
- 
-  
-
   const displayPlaces = places.slice(pagesVisited, pagesVisited+placesPerPage)
   .map(places => {
     return  <div class="col-lg-3 mb-3">
@@ -26,14 +23,15 @@ function Attractions() {
             <div class="card-body">
               <h5 class="card-title">{places.name}</h5>
               <p class="card-text">{places.description}</p>
-              <Link to={`/attractions/${places._id}`}>
-                  <a href="" className="btn btn-outline-success btn-sm" >Read More</a>
+              <Link to={`/attractions/${places._id}`}className="btn btn-outline-success btn-sm">
+                  Read More
               </Link>
 
             </div>
            </div>
           </div>
   });
+
 
   const pageCount = Math.ceil(places.length/placesPerPage)
  
@@ -42,6 +40,7 @@ function Attractions() {
   }
 
   useEffect(()=>{
+
     axios.get('http://localhost:3001/api/v1/places')
     .then(places =>  setPlaces(places.data))
     .catch(err=>console.log(err))

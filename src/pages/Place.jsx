@@ -8,16 +8,16 @@ import axios from 'axios';
 
 function Place() {
     const {placeID } = useParams();
-    const [place, setPlace] = useState([]);
+    const [places, setPlace] = useState([]);
 
     useEffect(() => {
         console.log("hello");
         axios.get(`http://localhost:3001/api/v1/places/${placeID}`)
-          .then(place => setPlace(place.data))
+          .then(response => setPlace(response.data))
           .catch(error => console.log(error));
       }, [placeID]);
 
-    if (!place) {
+    if (!places) {
         // Loading state
         return <div>Loading...</div>;
     }
@@ -27,13 +27,13 @@ function Place() {
             <div className='place-container1'>
                 <Navbar/>
                 <div className="container place-description-container">
-                    <h3 className='place-title'>{place.name}</h3>
+                    <h3 className='place-title'>{places.name}</h3>
                     <div className="row place-description">
                         <div className="col-5 place-image">
-                            <img src={place.image} alt={place.name} />
+                            <img src={places.image} alt={places.name} />
                         </div>
                         <div className="col-7 place-text">
-                            <p>{place.description}</p>
+                            <p>{places.description}</p>
                         </div>
                     </div>
                 </div>
