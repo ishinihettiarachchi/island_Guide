@@ -59,11 +59,11 @@
 
 #links a:hover{
     color: rgb(7, 218, 255);
+    background-color: rgb(26, 26, 26);
 }
 
 #links a:hover:before{
     width: 100%;
-   
 }
 
 .navbar-container .row2{

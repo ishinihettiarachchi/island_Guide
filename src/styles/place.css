@@ -4,8 +4,7 @@
 
 .place-container1{
     margin: 0;
-    padding: 0;
-     
+    padding: 0;    
 }
 
 .place-description-container .place-description{
@@ -20,4 +19,5 @@
 
 .place-description-container .place-image img{
     width: 100%;
+    object-fit: cover; 
 }

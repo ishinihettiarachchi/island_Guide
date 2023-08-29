@@ -51,7 +51,7 @@ function Home() {
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     Ut enim ad minim veniam, </p>
-                              <Link to ="/attractions"><a href="#" target="_blank"><OpenInNewIcon/></a></Link>
+                              <Link to ="/attractions"><OpenInNewIcon/></Link>
                         </div>
                   </div>
                   <div className="col-3 card">
