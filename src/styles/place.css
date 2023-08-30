@@ -13,11 +13,23 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    border: 1px solid rgb(178, 175, 175);
-    border-radius: 10px;
+    border: 1px solid #b2afaf;
+    
 }
 
 .place-description-container .place-image img{
     width: 100%;
     object-fit: cover; 
 }
+
+.place-images {
+    display: flex; /* Make the images flex items */
+    padding: 10px;
+  }
+  
+  .place-images img {
+    width: 100%; /* Set a fixed width for all images */
+    height: 200px;
+    object-fit: cover; /* Maintain aspect ratio while filling the container */
+    margin-right: 10px; /* Add some space between images */
+  }

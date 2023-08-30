@@ -9,7 +9,6 @@ import pic4 from '../images/pic4.png'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import {Link} from 'react-router-dom';
 
-
 function Home() {
   return (
 <div className="home-container">
