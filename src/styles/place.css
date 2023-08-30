@@ -33,3 +33,17 @@
     object-fit: cover; /* Maintain aspect ratio while filling the container */
     margin-right: 10px; /* Add some space between images */
   }
+
+ .place-text-back {
+    text-align: right;
+    position: relative;
+    bottom: 0;
+    right: 100px;
+    padding: 10px; /* Adding some padding for spacing */
+    
+  }
+
+  .back-text{
+    text-decoration: none;
+    color: rgb(87, 86, 86);
+  }

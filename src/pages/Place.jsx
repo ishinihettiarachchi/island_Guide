@@ -2,9 +2,10 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import '../styles/place.css';
 import Footer from '../components/Footer';
-import { useParams } from 'react-router-dom';
+import { useParams,Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+
 
 function Place() {
     const {placeID } = useParams();
@@ -44,8 +45,12 @@ function Place() {
               <img src={places.images.image4} alt="Image 4" />
             </div>
           )}
+          
                     </div>
                 </div>
+            </div>
+            <div className=" place-text-back">
+                    <Link to="/attractions" className='back-text'>Back to Explore</Link>
             </div>
             <Footer/>
         </div>
