@@ -37,6 +37,7 @@ function Home() {
     </div>
     
     <div className="row home-container2">
+      <div className="home-text">
             <h2>Explore Island Stories...</h2>
             <p className='main-para'>Discover the narratives woven into every corner and smile of Sri Lanka. 
                   This enchanting island is brimming with captivating tales, and we are eager 
@@ -71,7 +72,7 @@ function Home() {
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     Ut enim ad minim veniam, </p>
-                    <a href="#" target="_blank"><OpenInNewIcon/></a>
+                    <Link to ="/plan"><OpenInNewIcon/></Link>
                         </div>
                         
                   </div>
@@ -87,7 +88,7 @@ function Home() {
                   </div>
             </div>
     </div>
-    
+    </div>
               <Footer/>
       
     </div>

@@ -39,7 +39,7 @@ function Navbar() {
             </div>
             <div className="col-6" id='links'>
                 <a href="#"><Link to='/'>Home</Link></a>
-                <a href="#">Plan Your Trip</a>
+                <a href="#"><Link to='/plan'>Plan Your Trip</Link></a>
                 <a href="#"><Link to='/about'>About</Link></a>
                 <a href="#">Contact Us</a>
             </div>
