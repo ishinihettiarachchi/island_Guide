@@ -1,10 +1,12 @@
-import React from 'react'
+import Reac from 'react'
 import Navbar from '../components/Navbar'
 import '../styles/plan.css'
 import {Link} from 'react-router-dom';
 import Footer from '../components/Footer';
 
 function Plan() {
+
+
   return (
     <div className='plan-container'>
         <div className="plan-container1">
@@ -23,7 +25,8 @@ function Plan() {
       
             <div className="container plan-list">
                 <div className="row">
-                <Link className='col-6 plan-items-link'>
+                
+                <Link className='col-6 plan-items-link'to='/accomadations'>
                 <div className="plan-items">
                     <img src="https://th.bing.com/th/id/R.b7488e46c98346f74af330394d53e201?rik=%2fcIxpkyk%2bAn60g&pid=ImgRaw&r=0" alt="" />
                     <div className='plan-items-description'>

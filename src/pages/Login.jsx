@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function Login() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     
     const [username, setUsername] = useState('');
@@ -21,7 +22,9 @@ function Login() {
         passwordHash: password,
        
       });
+      setIsLoggedIn(true);
 
+      
       console.log(response.data);
       navigate('/');
       

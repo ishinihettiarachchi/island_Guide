@@ -1,0 +1,27 @@
+.accomadation-container .row{
+    margin-left: 0;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block; /* Ensures the container fits the image size */
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 20px;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 10px; /* Padding around text */
+    font-size: 18px; /* Font size */
+  }
+  

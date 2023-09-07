@@ -5,9 +5,11 @@ import Footer from '../components/Footer';
 import { useParams,Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+    
 
 function Place() {
+
+    
     const {placeID } = useParams();
     const [places, setPlace] = useState([]);
 
